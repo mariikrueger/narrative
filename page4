@@ -38,7 +38,7 @@
 
 <!-- The video -->
 <video autoplay muted id="myVideo">
-  <source src="movie3.MOV" type="video/mp4">
+  <source src="movie4.mov" type="video/mp4">
 </video>
 
 <!-- Optional: some overlay text to describe the video -->
