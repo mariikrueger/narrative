@@ -1,0 +1,20 @@
+<p id="myText">  
+</p>
+
+<video id="myVideo" controls>     
+  <source src="movie.MOV" type="video/mp4">
+  <source src="movie.MOV" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+
+
+<script>
+document.getElementById("myVideo”).onended = function() {myFunction()};
+function myFunction() {
+    document.getElementById("myText").innerHTML = "hello.";
+}
+</script>
+    
+<center>
+<br>
