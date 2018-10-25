@@ -10,7 +10,9 @@
 /* Add some content at the bottom of the video/page */
 .content {
     position: fixed;
-    bottom: 0;
+    bottom: 100;
+    left: 300;
+    font-size: 15px;
     background: rgba();
     color: #f1f1f1;
     width: 100%;
@@ -32,35 +34,98 @@
     background: #ffffff00;
     color:;
 }
+    
+
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 0px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 4%;
+  font-weight: bold;
+  color: #000000;
+}
+
        </style>
+
+
 
 
 
 <!-- The video -->
 <video autoplay muted id="myVideo">
-  <source src="movie10.mov" type="video/mp4">
+  <source src="newmovie.mov" type="video/mp4">
 </video>
 
 <!-- Optional: some overlay text to describe the video -->
+
 <div class="content">
+    
+
+    
+    
+
+
   <h1></h1>
-  <p>Things that talk know the least. Our words destroy us.</p>
+  
   <!-- Use a button to pause/play the video with JavaScript -->
- 
+      <br>
+     
+ <p id="myText">Our tour ends here.</p>
+<IMG SRC="tiny.gif">
+
+<button onclick="typeWriter()">speak</button>
+    
+    <br>
+     
+
+
 </div>
 
+  </div>
+</div>
 
 <script>
     var video = document.getElementById('myVideo');
 
     video.onended = function() {
-      alert("Destruction is sometimes its own reward.")
-      window.location = 'https://mariikrueger.github.io/narrative/page11.html'
+      alert("BEGIN AGAIN? LIKE YOU HAVE A CHOICE.")
+      window.location = 'https://mariikrueger.github.io/narrative/page10.html'
     };
+    
 </script>
 
+
+
+<script>
+var i = 0;
+var txt = ' But never ending damnation is just beginning. In this perfect, consistent sunshine that never changes.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("myText").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
 <audio controls autoplay loop hidden>
-  <source src="audio.ogg" type="audio/ogg">
-  <source src="audio.mp3" type="audio/mpeg">
+  <source src="nobody.ogg" type="audio/ogg">
+  <source src="nobody.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+
